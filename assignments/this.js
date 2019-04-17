@@ -36,16 +36,29 @@
 
 // Principle 3
 
-function Car(make, model) {
-    this.make = make;
-    this.model = model;
-};
+// function Car(make, model) {
+//     this.make = make;
+//     this.model = model;
+// };
 
-var myCar = new Car(`Toyota`, `RAV4`);
-    console.log(myCar);
+// var myCar = new Car(`Toyota`, `RAV4`);
+//     console.log(myCar);
 
 // code example for New Binding
 
 // Principle 4
+
+function add(c, d){
+    console.log(this.a + this.b + c + d);
+}
+
+// add(3, 4);
+
+var ten = {a: 1, b: 2};
+
+add.call(ten, 3, 4);
+
+add.apply(ten, [3, 4]);
+
 
 // code example for Explicit Binding
