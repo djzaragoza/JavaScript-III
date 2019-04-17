@@ -34,6 +34,26 @@
 
 // code example for Implicit Binding
 
+// var Person = function(name, age){
+//     return{
+//         name: name,
+//         age: age,
+//         sayName: function(){
+//             console.log(this.name);
+//         },
+//         mother: {
+//             name: `Thess`,
+//             sayName: function(){
+//                 console.log(this.name);
+//             }
+//         }
+//     };
+// };
+
+// var DJ = Person(`DJ`, 35);
+// DJ.sayName();
+// DJ.mother.sayName();
+
 // Principle 3
 
 // function Car(make, model) {
@@ -46,19 +66,25 @@
 
 // code example for New Binding
 
+// var Animal = function (color, name, type) {
+//     this.color = color;
+//     this.name = name;
+//     this.type = - type;
+// };
+
+// var zebra = new Animal(`black and white`, `Zorro`, `Zebra`);
+
 // Principle 4
 
-// function add(c, d){
-//     console.log(this.a + this.b + c + d);
-// }
+// var sayAge = function(){
+//     `use strict`;
+//     console.log(this.age);
+// };
 
-// // add(3, 4);
+// var me = {
+//     age: 35
+// };
 
-// var ten = {a: 1, b: 2};
-
-// add.call(ten, 3, 4);
-
-// add.apply(ten, [3, 4]);
-
+// sayAge();
 
 // code example for Explicit Binding
