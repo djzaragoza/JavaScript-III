@@ -48,17 +48,17 @@
 
 // Principle 4
 
-function add(c, d){
-    console.log(this.a + this.b + c + d);
-}
+// function add(c, d){
+//     console.log(this.a + this.b + c + d);
+// }
 
-// add(3, 4);
+// // add(3, 4);
 
-var ten = {a: 1, b: 2};
+// var ten = {a: 1, b: 2};
 
-add.call(ten, 3, 4);
+// add.call(ten, 3, 4);
 
-add.apply(ten, [3, 4]);
+// add.apply(ten, [3, 4]);
 
 
 // code example for Explicit Binding
