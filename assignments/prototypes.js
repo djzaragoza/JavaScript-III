@@ -15,6 +15,21 @@
   * dimensions (These represent the character's size in the video game)
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
+function GameObject(args){
+  this.createdAt = args.createdAt;
+  this.name = args.name;
+  this.dimensions = args.dimensions;
+}
+
+GameObject.prototype.destroy = function(){
+  return `${this.name} was removed from the game.`;
+}
+
+CharacterStats.prototype.takeDamage = function(){
+  return `${this.name} took damage` 
+}
+
+CharacterStats.prototype = Object.create(GameObject.prototype)
 
 /*
   === CharacterStats ===
